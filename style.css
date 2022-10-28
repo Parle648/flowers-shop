@@ -467,16 +467,16 @@ header .select-language .choise-language-item {
   }
 }
 .title .two {
-  background-image: url(/img/background2.jpg);
+  background-image: url(img/background2.jpg);
 }
 .title .three {
-  background-image: url(/img/background3.jpg);
+  background-image: url(img/background3.jpg);
 }
 .title .for {
-  background-image: url(/img/bacground4.jpg);
+  background-image: url(img/bacground4.jpg);
 }
 .title .five {
-  background-image: url(/img/background5.jpg);
+  background-image: url(img/background5.jpg);
 }
 .title .active-background {
   opacity: 1;
