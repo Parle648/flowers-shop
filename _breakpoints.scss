@@ -44,6 +44,13 @@
 
 //Mobile first
 
+
+@mixin xl-d(){
+    @media (max-width: map-get($brackpoints, xl) - .2px){
+        @content
+    }
+};
+
 @mixin lg-d(){
     @media (max-width: map-get($brackpoints, lg) - .2px){
         @content

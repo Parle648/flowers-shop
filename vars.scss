@@ -7,7 +7,7 @@ $hoverColor: rgba(235, 235, 235, 1);
 $grey: rgba(186, 186, 186, 1);
 
 $brackpoints: (
-    sm: 560px,
+    sm: 440px,
     md: 761px,
     lg: 940px,
     xl:1360px,
@@ -17,6 +17,7 @@ $brackpoints: (
     font-size: 18px;
     font-weight: 400;
     text-align: center;
+    color: #03453B;
 }
 
 @mixin forBtn {
@@ -27,6 +28,7 @@ $brackpoints: (
     padding: 1em 6em;
     border: 0px solid;
     border-radius: 4px;
+    width: 290px;
     cursor: pointer;
     &:hover{
         background-color: $green-dark;

@@ -12,6 +12,9 @@
     @include lg-d{
         width: 95%;
     }
+    @include md-d{
+        width: 100%;
+    }
 }
 
 header{

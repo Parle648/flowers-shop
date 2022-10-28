@@ -1,6 +1,9 @@
 .title{
     position: relative;
     height: 700px;
+    @include md-d{
+        height: 500px;
+    }
     .one,
     .two,
     .three,
@@ -46,8 +49,11 @@
             width: 639px;
             margin-bottom: 20px;
             @include md-d{
-                width: 85%;
+                width: 95%;
                 font-size: 30px;
+                padding-top: 98px;
+                margin-left: 10px;
+                margin-bottom: 10px;
             };
         }
         .afet-main-title{
@@ -57,8 +63,10 @@
             margin-bottom: 40px;
             color: $green;
             @include md-d{
-                width: 80%;
+                width: 85%;
                 font-size: 20px;
+                margin-left: 10px;
+                margin-bottom: 10px;
             };
         }
         .title-btn,
@@ -66,6 +74,13 @@
             @include forBtn;
             padding: 15px 30px;
             margin-bottom: 208px;
+            @include md-d{
+                margin-bottom: 170px;
+                margin-left: 10px;
+            }
+            @include sm-d{
+                margin-bottom: 72px;
+            }
         }
         .title2-btn{
             background-color: rgba(240, 248, 255, 0);
@@ -83,6 +98,9 @@
                 animation-name: animForArrow;
                 animation-duration: 1.2s ;
                 animation-iteration-count: 10;
+            }
+            @include md-d{
+                display: none;
             }
         }
         .pointers-block{

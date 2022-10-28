@@ -1,0 +1,42 @@
+.specialOrder{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    @include md-d{
+        padding-top: 90px;
+    }
+    .special-title{
+        font-size: 36px;
+        font-weight: 500;
+        font-family: "Montserrat";
+        color: $green;
+        margin-bottom: 5px;
+        @include md-d{
+            margin-left: 15px;
+        }
+    }
+    .special-title-after{
+        @include forText;
+        font-size: 16px;
+        text-align: start;
+        @include md-d{
+            margin-left: 15px;
+        }
+    }
+    .go-to-catalogue{
+        text-decoration: none;
+        position: relative;
+        @include forText;
+        .special-img{
+            margin-left: 10px;
+        }
+        @include md-d{
+            display: none;
+        }
+    }
+    .go-to-catalogue:hover{
+        cursor: pointer;
+    }
+}

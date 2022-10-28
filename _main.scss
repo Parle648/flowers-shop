@@ -1,13 +1,28 @@
 main{
     background-color: #e5e5e580;
-    display: flex;
-    justify-content: center;
     padding-top: 50px;
+    position: relative;
+    .bacground-vector{
+        position: absolute;
+        right: 0;
+        top: 18px;
+    }
     .typeof-products{
         display: grid;
         grid-template-columns: repeat(6, 200px);
         grid-gap: 20px;
-        padding-bottom: 102px;
+        margin: 0 auto;
+        margin-bottom: 102px;
+        @include xl-d{
+            width: 750px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            justify-content: center
+        };
+        @include md-d{
+            display: none;
+        }
         .typeof-element{
             display: flex;
             flex-direction: column;
@@ -29,12 +44,19 @@ main{
                 font-family: 'PT Sans';
                 padding-top: 11px;
             }
+            @include xl-d{
+                width: 167px
+            };
         }
         .typeof-element:last-child{
+            position: relative;
             height: 280px;
             grid-column-start: 6;
             grid-row-start: 1;
             grid-row-end: 3;
+            @include xl-d{
+                height: 128px;
+            };
         }
     }
 }
