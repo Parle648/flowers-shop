@@ -1,0 +1,40 @@
+main{
+    background-color: #e5e5e580;
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    .typeof-products{
+        display: grid;
+        grid-template-columns: repeat(6, 200px);
+        grid-gap: 20px;
+        padding-bottom: 102px;
+        .typeof-element{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 128px;
+            background-color: #fff;
+            border-radius: 4px;
+            cursor: pointer;
+            -webkit-box-shadow: 0 0 15px #ccc;
+            -webkit-user-select: none; 
+            &:hover{
+                transform: scale(1.1);
+                background-color: antiquewhite
+            }
+            .typeof-title{
+                @include forText;
+                color: $green;
+                font-family: 'PT Sans';
+                padding-top: 11px;
+            }
+        }
+        .typeof-element:last-child{
+            height: 280px;
+            grid-column-start: 6;
+            grid-row-start: 1;
+            grid-row-end: 3;
+        }
+    }
+}

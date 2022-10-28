@@ -12,3 +12,23 @@ $brackpoints: (
     lg: 940px,
     xl:1360px,
 );
+
+@mixin forText {
+    font-size: 18px;
+    font-weight: 400;
+    text-align: center;
+}
+
+@mixin forBtn {
+    background-color: $green;
+    font-size: 18px;
+    font-weight: 400;
+    color: #fff;
+    padding: 1em 6em;
+    border: 0px solid;
+    border-radius: 4px;
+    cursor: pointer;
+    &:hover{
+        background-color: $green-dark;
+    }
+}
