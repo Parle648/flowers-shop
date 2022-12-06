@@ -73,3 +73,15 @@ function changeClass(activeElem, classes){
     activeElem.classList.remove(classes);
     activeElem.nextElementSibling.classList.add(classes);
 }
+
+const heart = document.querySelectorAll('.heart');
+
+heart.forEach((item) => {
+    item.onclick = () => {
+        if(item.style.bacgroundColor = 'red'){
+            console.log(item.style)
+        }
+        
+        item.classList.toggle('herd-active');
+    };
+})

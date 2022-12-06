@@ -1,0 +1,114 @@
+.wrapper{
+    .about-us {
+        margin-bottom: 100px;
+        .about-title {
+            font-size: 36px;
+            font-weight: 500;
+            font-family: "Montserrat";
+            color: $green;
+            margin-bottom: 50px;
+        }
+        .first-article, 
+        .second-article{
+            display: flex;
+            justify-content: space-between;
+            .about-paragraph,
+            .about-paragraph2 {
+                font-size: 18px;
+                font-weight: 400;
+                font-family: "Montserrat";
+                margin-bottom: 15px;
+                width: 600px;
+                color: #333333;
+                @include xl-d{
+                    width: auto;
+                }
+                @include md-d{
+                    width: 90%;
+                    align-items: center;
+                    margin: 7px auto;
+                    font-size: 14px;
+                }
+            }
+            .aboust-us-img{
+                @include xl-d{
+                    width: 352px;
+                    height: 354px;
+                    margin-right: 20px;
+                }
+            }
+            .about-paragraph2 {
+                padding-top: 50px;
+            }    
+        }  
+        .first-article{
+            @include md-d{
+                flex-direction: column;
+                align-items: center;
+            }
+            .aboust-us-img{
+                @include xl-d{
+                    width: 90%;
+                    margin-right: 0px;
+                    text-align: center;
+                }
+            }
+        }
+    }
+    .second-article{
+        @include xl-d{
+            flex-direction: column;
+            align-items: center;
+        }
+        .aboust-us2-img {
+            margin-left: 50px;
+            @include xl-d{
+                width: 90%;
+                margin-left: 0px;
+            }
+        }
+    }
+}
+
+// revue
+
+.slider-btn-block {
+    width: 90px;
+    display: flex;
+    justify-content: space-between;
+    .arrow-left:hover,
+    .arrow-right:hover{
+        cursor: pointer;
+    }
+}
+
+.slider-wrapper{
+    width: 1600px;
+    overflow: hidden;
+    .slider {
+        display: flex;
+        justify-content: space-between;
+        .slider-element {
+            padding: 50px 100px;
+            background-color: #fff;
+            
+            .user {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 250px;
+            }
+            .user-inner {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .user-revue {
+                width: 250px;
+            }
+        }
+    }
+}
+
+
+

@@ -4,6 +4,11 @@
     align-items: center;
     background-color: $green;
     height: 616px;
+    margin-bottom: 100px;
+    @include xl-d{
+        height: auto;
+        padding: 50px 0px;
+    }
     .with-us-portable {
         display: flex;
         flex-direction: column;
@@ -13,6 +18,9 @@
         width: 85%;
         height: 520px;
         border: 5px solid $brown-light;
+        @include xl-d{
+            height: auto;
+        }
         .portable-main-title{
             color: #fff;
             font-size: 36px;
@@ -20,16 +28,32 @@
             font-family: "Montserrat";
             padding: 50px;
             margin-bottom: 46px;
+            text-align: center;
         }
         .with-us-portable-inner-block {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             grid-gap: 40px 30px;
             background-color: $green;
+            @include xl-d{
+                grid-template-columns: repeat(2, 1fr);
+            }
+            @include lg-d{
+                grid-template-columns: repeat(2, 1fr);
+            }
+            @include md-d{
+                grid-template-columns: repeat(1, 1fr);
+            }
             .portable-item {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
+                @include lg-d{
+                    width: 310px;
+                }
+                @include sm-d{
+                    width: 250px;
+                }
                 .portable-img{
                     margin-bottom: 15px;
                 }
