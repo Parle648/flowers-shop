@@ -7,11 +7,16 @@
             font-family: "Montserrat";
             color: $green;
             margin-bottom: 50px;
+            margin-left: 10px;
         }
         .first-article, 
         .second-article{
             display: flex;
             justify-content: space-between;
+            .aboust-us-img{
+                margin-right: 20px;
+                object-fit: cover;
+            }
             .about-paragraph,
             .about-paragraph2 {
                 font-size: 18px;
@@ -42,14 +47,14 @@
             }    
         }  
         .first-article{
-            @include md-d{
+            @include lg-d {
                 flex-direction: column;
                 align-items: center;
             }
             .aboust-us-img{
                 @include xl-d{
                     width: 90%;
-                    margin-right: 0px;
+                    margin-right: 20px;
                     text-align: center;
                 }
             }
@@ -84,15 +89,40 @@
 
 .slider-wrapper{
     width: 1600px;
+    @include md-d{
+        width: 100%;
+        overflow: hidden; 
+    }
     .slider {
         display: flex;
         justify-content: space-between;
+        @include md-d{
+            width: 737px;
+            overflow: hidden;
+        }
         .slider-element {
             width: 530px;
             height: 230px;
             padding: 50px 100px;
             margin-right: 20px;
             background-color: rgb(255, 255, 255);
+            @include md-d{
+                width: 152px;
+                margin-left: 10px;
+                padding: 47px 163px 49px 47px;
+                margin-right: 0px;
+            }
+            @include sm-d{
+                width: 100px;
+                margin-left: 10px;
+                padding: 47px 164px 97px 38px;
+                margin-right: 0px;
+            }
+            &:hover{
+                transform: scale(1.05);
+                transition: .3s;
+                cursor: pointer;
+            }
             .user {
                 display: flex;
                 justify-content: space-between;
@@ -101,6 +131,8 @@
                 margin-bottom: 20px;
                 .username{
                     font-size: 20px;
+                    font-family: "PT Sans";
+                    font-weight: 400;
                 }
             }
             .user-inner {
@@ -113,6 +145,15 @@
             }
             .user-revue {
                 width: 470px;
+                font-weight: 400;
+                color: $grey;
+                font-family: "PT Sans";
+                @include md-d{
+                    width: 290px;
+                }
+                @include sm-d{
+                    width: 248px;
+                }
             }
         }
     }
@@ -123,6 +164,9 @@
     padding-top: 50px;
     height: 350px;
     color: #fff;
+    @include xl-d{
+        height: auto;
+    }
     .how-it-work-ttl{
         font-size: 36px;
         text-align: center;
@@ -132,11 +176,26 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        margin: 0 auto;
+        @include xl-d{
+            flex-wrap: wrap;
+            width: 750px;
+        }
+        @include md-d{
+            flex-wrap: wrap;
+            width: 321px;
+        }
         .how-it-work-item {
             border: 3px solid $brown-light;
             border-radius: 4px;
             height: 176px;
             padding: 15px;
+            @include xl-d{
+                margin-bottom: 25px;
+            }
+            @include sm-d{
+                width: 267px;
+            }
             .step {
                 font-size: 20px;
                 height: 63px;
@@ -147,8 +206,6 @@
                     font-size: 24px;
                     margin-right: 15px;
                     padding: 20px;
-                }
-                .step-item {
                 }
             }
             .about-step {
@@ -168,7 +225,8 @@
         align-items: center;
         padding-top: 100px;
         margin-bottom: 50px;
-        .we-in-instagram-ttl {
+        @include md-d{
+            flex-direction: column;
         }
         .we-in-instagram-link > a{
             color: $green;
@@ -192,123 +250,248 @@
             &:hover{
                 transform: scale(1.1);
             }
+            @include md-d{
+                display: none;
+            }
         }
         .instagram-slider-element {
             &:hover{
                 transform: scale(1.05);
+                transition: .3s;
+                cursor: pointer;
             }
         }
     }
 }
-
+.map{
+    height: 400px;
+    width: 100%;
+    object-fit: cover;
+}
 .averange-footer-block{
     background-color: $green;
     height: 592px;
     margin-top: -5px;
+    @include lg-m-d{
+        height: auto;
+    }
 }
 footer{
     color: #EBEBEB;
     font-family: 'Montserrat';
-    .foote-logo {
-        .footer-logo-img {
+        .footer-wrapper{
+            width: 1300px;
+            margin: 0 auto;
+            @include xl-d{
+                width: 95%;
+            }
+        .foote-logo {
+            .footer-logo-img {
+                padding-top: 40px;
+            }
         }
-    }
-    
-    .footer-lists {
-        width: 1300px;
-        margin: 0 auto;
-        display: flex;
-        justify-content: space-between;
-        .footer-list-item {
-            .footer-phones-item{
-                display: flex;
-                align-items: center;
-                margin-bottom: 20px;
+        .footer-lists {
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            padding-top: 35px;
+            margin-bottom: 20px;
+            position: relative;
+            @include lg-m-d{
+                flex-wrap: wrap;
+                width: 360px;
             }
-            .phone-number{
-                color: #EBEBEB;
-                text-decoration: none;
-                margin-left: 11px;
-                font-size: 18px;
-                &:hover{
-                    color: $grey;
+            .footer-list-item {
+                .footer-phones-item{
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 20px;
                 }
-            }
-            .footer-social{
-                display: flex;
-                list-style-type: none;
-                align-items: center;  
-                justify-content: space-between;
-                width: 158px;
-            }
-            &:first-child{
-                display: flex;
-                flex-direction: column;
-                height: 300px;
-                justify-content: space-between;
-            }
-
-            .footer-nav1,
-            .footer-nav2{
-                display: flex;
-                flex-direction: column;
-                color: #EBEBEB;
-                align-items: start;
-                justify-content: space-between;
-                list-style-type: none;
-                .footer-nav-element1{
-                    margin-bottom: 10px;
-                    font-size: 16px;
-                    .footer-link{
-                        text-decoration: none;
-                        cursor: pointer;
-                        &:hover{
-                            color: $grey;
+                .phone-number{
+                    color: #EBEBEB;
+                    text-decoration: none;
+                    margin-left: 11px;
+                    font-size: 18px;
+                    &:hover{
+                        color: $grey;
+                    }
+                }
+                .footer-social{
+                    display: flex;
+                    list-style-type: none;
+                    align-items: center;  
+                    justify-content: space-between;
+                    width: 158px;
+                }
+                &:first-child{
+                    display: flex;
+                    flex-direction: column;
+                    height: 300px;
+                    justify-content: space-between;
+                    @include md-d{
+                        height: 523px;
+                    }
+                }
+    
+                .footer-nav1,
+                .footer-nav2{
+                    display: flex;
+                    flex-direction: column;
+                    color: #EBEBEB;
+                    align-items: start;
+                    justify-content: space-between;
+                    list-style-type: none;
+                    .footer-nav-element1{
+                        margin-bottom: 10px;
+                        font-size: 16px;
+                        .footer-link{
+                            text-decoration: none;
+                            cursor: pointer;
+                            &:hover{
+                                color: $grey;
+                            }
                         }
                     }
                 }
-            }
-            &:last-child{
-                font-size: 18px;
-                .footer-mail-ttl {
-                    font-size: 16px;
-                    width: 277px;
-                }
-                .footer-mail {
-                    background-color: rgba(255, 255, 255, 0);
-                    border: 1px solid $grey;
-                    border-radius: 4px;
-                    width: 258px;
-                    height: 42px;
-                    padding-left: 12px;
-                    margin-bottom: 100px;
-                    &:focus{
-                        background-color: #EBEBEB;
-                        border-color: rgb(209, 209, 209);
+                .footer-nav2{
+                    @include md-d{
+                        margin-top: 181px;
                     }
                 }
-                .mail-btn{
-                    background-color: #70A5A0;
-                    height: 43px;
-                    width: 150px;
-                    margin-left: -5px;
-                    border: 1px solid $grey;
-                    border-radius: 4px;
-                    color: #EBEBEB;
-                    font-size: 16px;
-                    cursor: pointer;
-                    &:hover{
-                        background-color: #70a5a0ce;
-                    }
-                }
-                .place-link {
-                    text-decoration: none;
-                    color: #EBEBEB;
+                &:last-child{
                     font-size: 18px;
-                    display: inline-block;
-                    margin-bottom: 20px;
+                    @include md-d{
+                        padding-top: 15px;
+                    }
+                    .footer-mail-ttl {
+                        font-size: 16px;
+                        width: 327px;
+                        margin-bottom: 10px;
+                        line-height: 19.5px;
+                    }
+                    .footer-mail {
+                        background-color: rgba(255, 255, 255, 0);
+                        border: 1px solid $grey;
+                        border-top-left-radius: 4px;
+                        border-bottom-left-radius: 4px;
+                        width: 258px;
+                        height: 42px;
+                        padding-left: 12px;
+                        margin-bottom: 100px;
+                        &:focus{
+                            background-color: #EBEBEB;
+                            border-color: rgb(209, 209, 209);
+                        }
+                    }
+                    .mail-btn{
+                        background-color: #70A5A0;
+                        height: 43px;
+                        width: 150px;
+                        margin-left: -5px;
+                        border: 1px solid $grey;
+                        color: #EBEBEB;
+                        font-size: 16px;
+                        cursor: pointer;
+                        &:hover{
+                            background-color: #70a5a0ce;
+                        }
+                        @include md-d{
+                            margin-left: -70px;
+                        }
+                    }
+                    .place-link {
+                        text-decoration: none;
+                        color: #EBEBEB;
+                        font-size: 18px;
+                        display: inline-block;
+                        margin-bottom: 20px;
+                        @include md-d{
+                            width: 192px;
+                            position: absolute;
+                            right: -31px;
+                            top: 32px;
+                        }
+                    }
+                    .place-link2{
+                        @include md-d{
+                            top: 78px;
+                        }
+                    }
+                    .work-time{
+                        font-size: 18px;
+                    }
+                }
+            }
+            #second-footer-list{
+                @include md-d{
+                    position: absolute;
+                    margin: 170px 0px -80px 0px;
                 }
             }
         }
+    }
+    .footer-flex{
+        width: 1300px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        @include md-d{
+            width: 95%;
+            flex-direction: column-reverse;
+            align-items: center;
+        }
+        .footer-caution{
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 5px;
+            @include md-d{
+                flex-direction: column-reverse;
+            }
+            .develop-pages{
+                display: flex;
+                align-items: center;
+                & > a{
+                    @include forLink;
+                }
+                .recode-sdudio{
+                    margin: 0px 5px 0px 15px;
+                }
+            }
+        }
+    
+        .footer-info{
+            list-style-type: none;
+            @include md-d{
+                width: 100%;
+            }
+            .footer-info-item{
+                margin-bottom: 5px;
+                font-size: 13px;
+                color: $grey;
+                @include md-d{
+                    width: 100%;
+                    text-align: center;
+                }
+            }
+        }
+        
+    }
+    .pay-sistems{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 18px 0px 16px 0px;
+        @include md-d{
+            flex-wrap: wrap;
+            align-items: center;
+        }
+    }
+}
+.wrapper{
+    @include xxl-d{
+        width: 95%;
+        overflow: hidden;
     }
 }
