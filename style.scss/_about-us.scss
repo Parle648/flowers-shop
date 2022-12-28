@@ -84,31 +84,231 @@
 
 .slider-wrapper{
     width: 1600px;
-    overflow: hidden;
     .slider {
         display: flex;
         justify-content: space-between;
         .slider-element {
+            width: 530px;
+            height: 230px;
             padding: 50px 100px;
-            background-color: #fff;
-            
+            margin-right: 20px;
+            background-color: rgb(255, 255, 255);
             .user {
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
                 width: 250px;
+                margin-bottom: 20px;
+                .username{
+                    font-size: 20px;
+                }
             }
             .user-inner {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
+                .star{
+                    margin-left: -22px;
+                }
             }
             .user-revue {
-                width: 250px;
+                width: 470px;
             }
         }
     }
 }
 
+.how-it-work {
+    background-color: $green;
+    padding-top: 50px;
+    height: 350px;
+    color: #fff;
+    .how-it-work-ttl{
+        font-size: 36px;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+    .how-it-work-container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .how-it-work-item {
+            border: 3px solid $brown-light;
+            border-radius: 4px;
+            height: 176px;
+            padding: 15px;
+            .step {
+                font-size: 20px;
+                height: 63px;
+                padding-top: 35px;
+                .step-number {
+                    border: 2px solid #fff;
+                    border-radius: 50%;
+                    font-size: 24px;
+                    margin-right: 15px;
+                    padding: 20px;
+                }
+                .step-item {
+                }
+            }
+            .about-step {
+                color: #fff;
+                font-size: 18px;
+                width: 280px;
+            }
+        }
+    }
+}
+.we-in-instagram {
+    .we-in-instagram-above {
+        color: $green;
+        font-size: 36px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 100px;
+        margin-bottom: 50px;
+        .we-in-instagram-ttl {
+        }
+        .we-in-instagram-link > a{
+            color: $green;
+            text-decoration: none;
+            font-size: 24px;
+        }
+    }
+    .instagram-slider {
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 1300px;
+        position: relative;
+        margin-bottom: 98px;
+        .arrow-right {
+            position: absolute;
+            right: -25px;
+            top: 50%;
+            cursor: pointer;
+            &:hover{
+                transform: scale(1.1);
+            }
+        }
+        .instagram-slider-element {
+            &:hover{
+                transform: scale(1.05);
+            }
+        }
+    }
+}
 
+.averange-footer-block{
+    background-color: $green;
+    height: 592px;
+    margin-top: -5px;
+}
+footer{
+    color: #EBEBEB;
+    font-family: 'Montserrat';
+    .foote-logo {
+        .footer-logo-img {
+        }
+    }
+    
+    .footer-lists {
+        width: 1300px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        .footer-list-item {
+            .footer-phones-item{
+                display: flex;
+                align-items: center;
+                margin-bottom: 20px;
+            }
+            .phone-number{
+                color: #EBEBEB;
+                text-decoration: none;
+                margin-left: 11px;
+                font-size: 18px;
+                &:hover{
+                    color: $grey;
+                }
+            }
+            .footer-social{
+                display: flex;
+                list-style-type: none;
+                align-items: center;  
+                justify-content: space-between;
+                width: 158px;
+            }
+            &:first-child{
+                display: flex;
+                flex-direction: column;
+                height: 300px;
+                justify-content: space-between;
+            }
 
+            .footer-nav1,
+            .footer-nav2{
+                display: flex;
+                flex-direction: column;
+                color: #EBEBEB;
+                align-items: start;
+                justify-content: space-between;
+                list-style-type: none;
+                .footer-nav-element1{
+                    margin-bottom: 10px;
+                    font-size: 16px;
+                    .footer-link{
+                        text-decoration: none;
+                        cursor: pointer;
+                        &:hover{
+                            color: $grey;
+                        }
+                    }
+                }
+            }
+            &:last-child{
+                font-size: 18px;
+                .footer-mail-ttl {
+                    font-size: 16px;
+                    width: 277px;
+                }
+                .footer-mail {
+                    background-color: rgba(255, 255, 255, 0);
+                    border: 1px solid $grey;
+                    border-radius: 4px;
+                    width: 258px;
+                    height: 42px;
+                    padding-left: 12px;
+                    margin-bottom: 100px;
+                    &:focus{
+                        background-color: #EBEBEB;
+                        border-color: rgb(209, 209, 209);
+                    }
+                }
+                .mail-btn{
+                    background-color: #70A5A0;
+                    height: 43px;
+                    width: 150px;
+                    margin-left: -5px;
+                    border: 1px solid $grey;
+                    border-radius: 4px;
+                    color: #EBEBEB;
+                    font-size: 16px;
+                    cursor: pointer;
+                    &:hover{
+                        background-color: #70a5a0ce;
+                    }
+                }
+                .place-link {
+                    text-decoration: none;
+                    color: #EBEBEB;
+                    font-size: 18px;
+                    display: inline-block;
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+}
