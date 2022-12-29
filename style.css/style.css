@@ -1333,11 +1333,15 @@ main .typeof-products .typeof-element:last-child {
   font-size: 24px;
   margin-right: 15px;
   padding: 20px;
+  font-family: "Montserrat";
+  font-weight: 600;
 }
 .how-it-work .how-it-work-container .how-it-work-item .about-step {
   color: #fff;
   font-size: 18px;
   width: 280px;
+  font-family: "Montserrat";
+  font-weight: 400;
 }
 
 .we-in-instagram .we-in-instagram-above {
@@ -1437,6 +1441,11 @@ footer .footer-wrapper {
     width: 95%;
   }
 }
+@media (max-width: 803.8px) {
+  footer .footer-wrapper {
+    overflow: hidden;
+  }
+}
 footer .footer-wrapper .foote-logo .footer-logo-img {
   padding-top: 40px;
 }
@@ -1477,6 +1486,11 @@ footer .footer-wrapper .footer-lists .footer-list-item .phone-number {
 footer .footer-wrapper .footer-lists .footer-list-item .phone-number:hover {
   color: rgb(186, 186, 186);
 }
+@media (max-width: 439.8px) {
+  footer .footer-wrapper .footer-lists .footer-list-item .phone-number {
+    font-size: 14px;
+  }
+}
 footer .footer-wrapper .footer-lists .footer-list-item .footer-social {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1506,6 +1520,11 @@ footer .footer-wrapper .footer-lists .footer-list-item:first-child {
 @media (max-width: 803.8px) {
   footer .footer-wrapper .footer-lists .footer-list-item:first-child {
     height: 523px;
+  }
+}
+@media (max-width: 439.8px) {
+  footer .footer-wrapper .footer-lists .footer-list-item:first-child {
+    height: 632px;
   }
 }
 footer .footer-wrapper .footer-lists .footer-list-item .footer-nav1,
@@ -1540,9 +1559,21 @@ footer .footer-wrapper .footer-lists .footer-list-item .footer-nav1 .footer-nav-
 footer .footer-wrapper .footer-lists .footer-list-item .footer-nav2 .footer-nav-element1 .footer-link:hover {
   color: rgb(186, 186, 186);
 }
+@media (max-width: 439.8px) {
+  footer .footer-wrapper .footer-lists .footer-list-item .footer-nav1,
+footer .footer-wrapper .footer-lists .footer-list-item .footer-nav2 {
+    font-size: 14px;
+    width: 150px;
+  }
+}
 @media (max-width: 803.8px) {
   footer .footer-wrapper .footer-lists .footer-list-item .footer-nav2 {
     margin-top: 181px;
+  }
+}
+@media (max-width: 439.8px) {
+  footer .footer-wrapper .footer-lists .footer-list-item .footer-nav2 {
+    margin: 172px 51px 0px 0px;
   }
 }
 footer .footer-wrapper .footer-lists .footer-list-item:last-child {
@@ -1573,6 +1604,11 @@ footer .footer-wrapper .footer-lists .footer-list-item:last-child .footer-mail:f
   background-color: #EBEBEB;
   border-color: rgb(209, 209, 209);
 }
+@media (max-width: 803.8px) {
+  footer .footer-wrapper .footer-lists .footer-list-item:last-child .footer-mail {
+    margin-bottom: 25px;
+  }
+}
 footer .footer-wrapper .footer-lists .footer-list-item:last-child .mail-btn {
   background-color: #70A5A0;
   height: 43px;
@@ -1591,6 +1627,12 @@ footer .footer-wrapper .footer-lists .footer-list-item:last-child .mail-btn:hove
     margin-left: -70px;
   }
 }
+@media (max-width: 439.8px) {
+  footer .footer-wrapper .footer-lists .footer-list-item:last-child .mail-btn {
+    display: block;
+    margin-left: 1px;
+  }
+}
 footer .footer-wrapper .footer-lists .footer-list-item:last-child .place-link {
   text-decoration: none;
   color: #EBEBEB;
@@ -1604,6 +1646,13 @@ footer .footer-wrapper .footer-lists .footer-list-item:last-child .place-link {
     position: absolute;
     right: -31px;
     top: 32px;
+  }
+}
+@media (max-width: 439.8px) {
+  footer .footer-wrapper .footer-lists .footer-list-item:last-child .place-link {
+    width: 141px;
+    right: 56px;
+    font-size: 14px;
   }
 }
 @media (max-width: 803.8px) {
@@ -1644,7 +1693,6 @@ footer .footer-flex {
   }
 }
 footer .footer-flex .footer-caution {
-  margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1662,6 +1710,10 @@ footer .footer-flex .footer-caution {
     -webkit-box-direction: reverse;
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
+    display: inline-block;
+    margin-bottom: 10px;
+    margin: 0 auto;
+    padding-bottom: 15px;
   }
 }
 footer .footer-flex .footer-caution .develop-pages {
@@ -1698,7 +1750,7 @@ footer .footer-flex .footer-info .footer-info-item {
 @media (max-width: 803.8px) {
   footer .footer-flex .footer-info .footer-info-item {
     width: 100%;
-    text-align: center;
+    text-align: start;
   }
 }
 footer .pay-sistems {
@@ -1708,9 +1760,9 @@ footer .pay-sistems {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding: 18px 0px 16px 0px;
 }
 @media (max-width: 803.8px) {
